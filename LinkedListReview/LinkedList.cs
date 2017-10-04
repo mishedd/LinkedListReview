@@ -14,5 +14,16 @@ namespace LinkedListReview
 		{
 			head = null;
 		}
+        public void addFirst(String value)
+        {
+            Node thisnode = head;
+            head.next = thisnode;
+            thisnode.previous = head;
+
+        }
+        public string getFirst()
+        {
+            return head.value;
+        }
 	}
 }
