@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace LinkedListReview
 {
-	class Program
+	class LinkedList
 	{
-		static void Main(string[] args)
+		Node head;
+
+		public LinkedList()
 		{
-			LinkedList linkedList = new LinkedList();
+			head = null;
 		}
 	}
 }

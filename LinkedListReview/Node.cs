@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 
 namespace LinkedListReview
 {
-	class Program
+	class Node
 	{
-		static void Main(string[] args)
+		Node previous, next;
+		string value;
+
+		public Node(Node p, Node n, string val)
 		{
-			LinkedList linkedList = new LinkedList();
+			previous = p;
+			next = n;
+			value = val;
 		}
 	}
 }
