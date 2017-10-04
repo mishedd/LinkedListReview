@@ -17,9 +17,9 @@ namespace LinkedListReview
 
         public void addFirst(String value)
         {
-            Node thisnode = head;
-            head.next = thisnode;
-            thisnode.previous = head;
+            Node temp = head;
+            head.next = temp;
+            temp.previous = head;
 
         }
 
@@ -53,16 +53,33 @@ namespace LinkedListReview
 			}
 			return temp;
 		}
-
 		public override string ToString()
 		{
-			Node temp = head;
-			string output = "[ ]";
-			while(temp != null)
+			string output = head != null ? "{ " + head.value : "{ ";
+			Node current = head != null ? head.next : null;
+
+			while (current != null)
 			{
-				
+				output += ", " + current.value;
+				current = current.next;
 			}
-			return output;
+
+			return output + " }";
 		}
+        public string getLast()
+        {
+            Node temp = head;
+            while (true)
+            {
+                if (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                else
+                {
+                    return temp.value;
+                }
+            }
+        }
 	}
 }
