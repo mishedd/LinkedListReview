@@ -14,6 +14,7 @@ namespace LinkedListReview
 		{
 			head = null;
 		}
+
         public void addFirst(String value)
         {
             Node thisnode = head;
@@ -21,6 +22,7 @@ namespace LinkedListReview
             thisnode.previous = head;
 
         }
+
 		public void AddLast(string value)
 		{
 			Node temp = head;
@@ -30,10 +32,12 @@ namespace LinkedListReview
 			}
 			temp.next = new Node(temp, null, value);
 		}
+
         public string getFirst()
         {
             return head.value;
         }
+
 		public Node GetNode(int index)
 		{
 			Node temp = head;
@@ -48,6 +52,17 @@ namespace LinkedListReview
 				}
 			}
 			return temp;
+		}
+
+		public override string ToString()
+		{
+			Node temp = head;
+			string output = "[ ]";
+			while(temp != null)
+			{
+				
+			}
+			return output;
 		}
 	}
 }
