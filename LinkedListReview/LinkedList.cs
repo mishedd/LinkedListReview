@@ -21,6 +21,15 @@ namespace LinkedListReview
             thisnode.previous = head;
 
         }
+		public void AddLast(string value)
+		{
+			Node temp = head;
+			while (temp.next != null)
+			{
+				temp = temp.next;
+			}
+			temp.next = new Node(temp, null, value);
+		}
         public string getFirst()
         {
             return head.value;
