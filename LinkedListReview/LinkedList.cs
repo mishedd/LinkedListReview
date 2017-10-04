@@ -16,9 +16,9 @@ namespace LinkedListReview
 		}
         public void addFirst(String value)
         {
-            Node thisnode = head;
-            head.next = thisnode;
-            thisnode.previous = head;
+            Node temp = head;
+            head.next = temp;
+            temp.previous = head;
 
         }
 		public void AddLast(string value)
@@ -49,5 +49,20 @@ namespace LinkedListReview
 			}
 			return temp;
 		}
+        public string getLast()
+        {
+            Node temp = head;
+            while (true)
+            {
+                if (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                else
+                {
+                    return temp.value;
+                }
+            }
+        }
 	}
 }
