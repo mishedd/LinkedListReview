@@ -14,7 +14,6 @@ namespace LinkedListReview
 		{
 			head = null;
 		}
-<<<<<<< HEAD
         public void addFirst(String value)
         {
             Node thisnode = head;
