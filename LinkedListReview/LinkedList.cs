@@ -53,6 +53,7 @@ namespace LinkedListReview
 			}
 			return temp;
 		}
+
 		public override string ToString()
 		{
 			string output = head != null ? "{ " + head.value : "{ ";
@@ -65,6 +66,11 @@ namespace LinkedListReview
 			}
 
 			return output + " }";
+		}
+
+		public string Get(int index)
+		{
+			return GetNode(index).value;
 		}
         public string getLast()
         {
