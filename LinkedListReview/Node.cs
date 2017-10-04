@@ -8,8 +8,8 @@ namespace LinkedListReview
 {
 	class Node
 	{
-		Node previous, next;
-		string value;
+		public Node previous, next;
+		public string value;
 
 		public Node(Node p, Node n, string val)
 		{
