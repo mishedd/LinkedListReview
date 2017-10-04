@@ -11,6 +11,13 @@ namespace LinkedListReview
 		static void Main(string[] args)
 		{
 			LinkedList linkedList = new LinkedList();
+			linkedList.AddLast("duck");
+			linkedList.addFirst("dog");
+			linkedList.AddLast("cat");
+			linkedList.AddLast("bird");
+			Console.WriteLine(linkedList.Get(1));
+			Console.ReadLine();
+
 		}
 	}
 }

@@ -15,17 +15,20 @@ namespace LinkedListReview
 			head = null;
 		}
 
-        public void addFirst(String value)
+        public void addFirst(string value)
         {
-            Node temp = head;
-            head.next = temp;
-            temp.previous = head;
+			head = new Node(null, head, value);
 
         }
 
 		public void AddLast(string value)
 		{
 			Node temp = head;
+			if (head == null)
+			{
+				head = new Node(null, null, value);
+				return;
+			}
 			while (temp.next != null)
 			{
 				temp = temp.next;
@@ -72,6 +75,7 @@ namespace LinkedListReview
 		{
 			return GetNode(index).value;
 		}
+
         public string getLast()
         {
             Node temp = head;
